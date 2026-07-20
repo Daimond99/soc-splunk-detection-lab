@@ -1,10 +1,10 @@
 # SOC Detection Lab: OWASP Juice Shop + Splunk
 
-A hands-on Blue Team / SOC Tier 1 lab simulating the detection, triage, and alerting workflow for common web application attacks (SQL Injection, XSS, Path Traversal) using **Splunk Enterprise** as the SIEM.
+A hands-on Blue Team / SOC Tier 1 lab simulating the detection, triage, and alerting workflow for common web application attacks (SQL Injection, XSS, Path Traversal) using Splunk Enterprise as the SIEM.
 
 This project was built to demonstrate practical SOC Analyst skills: generating attack traffic, ingesting logs into a SIEM, writing detection searches (SPL), classifying severity, and configuring automated alerts.
 
->โปรเจกต์นี้จำลองการทำงานของ SOC Tier 1 Analyst ตั้งแต่ต้นจนจบ เริ่มจากยิง attack จำลอง (SQL Injection, XSS, Path Traversal) ใส่เว็บแอปช่องโหว่ OWASP Juice Shop จากนั้นนำ log เข้า Splunk (SIEM) เพื่อตรวจจับ วิเคราะห์ระดับความรุนแรง (severity) และตั้ง Alert อัตโนมัติ เพื่อฝึกทักษะ เช่น log analysis, threat detection, และ incident triage
+>โปรเจกต์นี้จำลองการทำงานของ SOC Tier 1 Analyst ตั้งแต่ต้นจนจบ — เริ่มจากยิง attack จำลอง (SQL Injection, XSS, Path Traversal) ใส่เว็บแอปช่องโหว่ OWASP Juice Shop จากนั้นนำ log เข้า Splunk (SIEM) เพื่อตรวจจับ วิเคราะห์ระดับความรุนแรง (severity) และตั้ง Alert อัตโนมัติ เพื่อฝึกทักษะ เช่น log analysis, threat detection, และ incident triage
 
 ---
 

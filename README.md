@@ -4,6 +4,8 @@ A hands-on Blue Team / SOC Tier 1 lab simulating the detection, triage, and aler
 
 This project was built to demonstrate practical SOC Analyst skills: generating attack traffic, ingesting logs into a SIEM, writing detection searches (SPL), classifying severity, and configuring automated alerts.
 
+> **สรุปโดยย่อ (ภาษาไทย):** โปรเจกต์นี้จำลองการทำงานของ SOC Tier 1 Analyst ตั้งแต่ต้นจนจบ — เริ่มจากยิง attack จำลอง (SQL Injection, XSS, Path Traversal) ใส่เว็บแอปช่องโหว่ OWASP Juice Shop จากนั้นนำ log เข้า Splunk (SIEM) เพื่อตรวจจับ วิเคราะห์ระดับความรุนแรง (severity) และตั้ง Alert อัตโนมัติ เพื่อฝึกทักษะที่ตรงกับงานสาย SOC/Blue Team จริง เช่น log analysis, threat detection, และ incident triage
+
 ---
 
 ## Overview
@@ -55,6 +57,8 @@ This project was built to demonstrate practical SOC Analyst skills: generating a
 | SQL Injection (UNION) | `' UNION SELECT 1,2,3--` in search query | **500** | **Confirmed** — triggered `SQLITE_ERROR: near "UNION"` revealing unsanitized input & backend DB type |
 
 ## Key Findings
+
+> **สรุปผลการทดสอบ:** พบช่องโหว่ SQL Injection ระดับ Critical ที่ทำให้ bypass การ login เข้าเป็น admin ได้จริง และ SQL Injection แบบ UNION ที่ยืนยันได้จาก error message ของฐานข้อมูล ส่วน XSS ตรวจพบว่า request ผ่านเข้าไปได้แต่ยังต้องยืนยันผลกระทบเพิ่มเติมผ่าน browser และ Path Traversal ถูกจัดเป็น false positive หลังตรวจสอบแล้วว่าไม่สามารถเข้าถึงไฟล์ระบบจริงได้
 
 - **Critical:** SQLi login bypass succeeded, granting an authenticated admin session token without valid credentials.
 - **High:** UNION-based SQL injection returned a database error, confirming unsanitized input and disclosing backend technology (SQLite).

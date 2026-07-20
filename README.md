@@ -18,7 +18,7 @@ This project was built to demonstrate practical SOC Analyst skills: generating a
 ## Architecture
 
 ```
-[Kali VM - Attacker]  --curl payloads-->  [Juice Shop - Docker Target, 192.168.229.133:3000]
+[Kali VM - Attacker]  --curl payloads-->  [Juice Shop - Docker Target, 192.168......] (Vmware ฉันเอง)
         |
         v
   attack_traffic.log (curl -v output, timestamped)
@@ -114,7 +114,7 @@ See [`ir-playbook.md`](ir-playbook.md) for the full Detection → Triage → Esc
 | 07 | `07-alert-configuration.png` | Alert configuration detail |
 | 08 | `08-alerts-list.png` | Alerts list — active scheduled alert |
 
-*(See `/screenshots` folder)* ดูได้ใน folder นี้
+*(See `/screenshots` folder)* ดูได้ใน folder นี้เลยจ้า
 
 ![Severity classification search](screenshots/06-search-severity-classification.png)
 
